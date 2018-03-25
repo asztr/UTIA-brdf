@@ -1,7 +1,15 @@
-#Library for exr manipulation. Reads and writes from exr 3-channel files to numpy (x,y,c) arrays.
+"""
+**************************************************************************
+\file    read_brdf.py
+\author  Alejandro Sztrajman
+\date    March 2018
+\version 1.00
 
-#The natural representation of exrs is an array of 1D arrays each containing a channel (c, x*y).
-#To transform to the other representation I'm using np.swapaxes and rgb2rgbdict.
+Library for image manipulation. Use functions read_image and write_image for automatic selection of gamma.
+EXR: reads/writes EXR files (32 bits, linear gamma RGB) from/to numpy (x,y,c) arrays.
+Other formats (e.g. PNG): reads/writes image files (8 bits, sRGB) from/to numpy (x,y,c) arrays.
+******************************************************************************
+"""
 
 import OpenEXR
 import Imath
